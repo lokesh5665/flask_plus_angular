@@ -1,4 +1,4 @@
-[Watch the video](./videos/Notification.mp4)
+[Watch the video](./videos/Notifications.mp4)
 # 📬 Notifications Assignment
 
 This repository contains the solution for the assignment task involving:
