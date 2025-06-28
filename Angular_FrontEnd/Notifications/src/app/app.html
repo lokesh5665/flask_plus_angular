@@ -1,0 +1,27 @@
+<main class="main">
+  <div class="content fancy-card">
+    <div class="header">
+      <h2> Socket Task Updates</h2>
+      <div class="status" [class.active]="isRunning">{{ isRunning ? 'Running...' : 'Stopped' }}</div>
+    </div>
+
+    <div class="actions">
+      <button (click)="startTask()" [disabled]="isRunning">▶️ Start Task</button>
+      <button (click)="stopTask()" [disabled]="!isRunning">⏹ Stop Task</button>
+    </div>
+
+    <div class="notifications" *ngIf="showNotifications && updates.length">
+      <h3>Notifications</h3>
+      <ul>
+        <li *ngFor="let update of updates">{{ update.msg }}</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h1>Hello, {{ title }} </h1>
+      <p>Your app is live and fancy now.</p>
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
